@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <div class="width-10">
-      <p class="menubar">Menu</p>
-      <SideBar :class="{sidebarOpen: isOpen === true }" ref="myComponent"/>
+      <div class="menubar" @click="toggleMenu">
+        <img src="https://cdn-icons-png.flaticon.com/512/8471/8471100.png" alt="" style="width: 30px; height: 30px;">
+      </div>
+      <SideBar :class="{ sidebarOpen: showMenu === true }" />
     </div>
     <div class="width-90">
       <div class="header-title">
@@ -50,13 +52,13 @@ export default {
   },
   data() {
     return {
-      isOpen: false
+      showMenu: false
     }
   },
   methods: {
-    openMenu() {
-      this.isOpen = true
-    },
+     toggleMenu() {
+      this.showMenu = !this.showMenu;
+    }
   }
 }
 </script>
@@ -152,13 +154,19 @@ export default {
   .bg-sidebar {
     width: 20%;
     display: none;
+
   }
 
   .menubar {
-    background-color: aqua;
+    height: 100%;
+ 
   }
-  .menubar:hover + .bg-sidebar {
+
+  .sidebarOpen {
     display: block;
+
+    top: 40px;
+    width: 20%;
   }
 }
 
