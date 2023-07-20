@@ -3,8 +3,8 @@
         <div>
             <b class="item-title">Lorem ipsum dolor sit amet</b>
             <div class="item-content">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA9jyeynlFwVGBRreQHauSuqrkhoKGk7ytIw8OpgZbNA&s"
-                    alt="" class="img-content">
+                <img :src="imgUrl" alt="" class="img-content">
+                    
                 <p class="item-sub">
                     Lorem ipsum dolor sit
                     amet, consectetur
@@ -25,9 +25,20 @@
     </div>
 </template>
 
+<script>
+export default {
+    props: {
+        imgUrl: {
+            type: String,
+            required: true
+        }
+    }
+}
+</script>
+
 <style>
 .width-33 {
-    max-width: 32%;
+    max-width: 30%;
     margin-top: 20px;
 }
 
@@ -59,7 +70,7 @@
 
 @media  screen and (min-width: 768px) and (max-width: 1200px) {
     .width-33 {
-        max-width: 48% !important
+        max-width: 47% !important
     }
 }
 
