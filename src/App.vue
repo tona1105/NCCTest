@@ -112,9 +112,9 @@ export default {
 .footer::after {
   content: '';
   position: absolute;
-  bottom: -8%;
+  bottom: -5%;
   left: 10%;
-  width: 100%;
+  width: 90%;
   height: 1px;
   background-color: #c7c7c7;
 }

@@ -1,7 +1,7 @@
 <template>
     <div class="bg-sidebar">
         <ul>
-            <li>Home</li>
+            <li style="font-weight: bold;">Home</li>
             <li>Service</li>
             <li>News</li>
             <li>Blog</li>
@@ -19,14 +19,23 @@
     color: #e2f4f8;
     width: 10%;
     min-height: 100%;
+    z-index: 1000;
 }
 ul {
-    padding-left: 15px;
+    margin: 0;
+    padding: 0;
 }
 li {
+    
     display: block;
-    padding: 15px 0;
+    padding: 15px 0 15px 15px;
     position: relative;
+}
+
+li:hover {
+    background-color: #5C5C5C;
+    font-weight: bold;
+    overflow: hidden;
 }
 
 li::after {
