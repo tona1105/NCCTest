@@ -8,7 +8,7 @@
                 <p class="item-sub">
                     Lorem ipsum dolor sit
                     amet, consectetur
-                    adipiscing elit. Sed non
+                    adipiscing elit. Sed
                     dui sodales, faucibus
                     libero ut, posuere felis.
                     Donec imperdiet suscipit
@@ -27,8 +27,7 @@
 
 <style>
 .width-33 {
-    max-width: 33.333%;
-    padding: 6px;
+    max-width: 32%;
     margin-top: 20px;
 }
 
@@ -50,4 +49,18 @@
 .item-sub {
     margin: 0;
     text-align: initial;
-}</style>
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    .width-33 {
+        max-width: 100% !important;
+    }
+}
+
+@media  screen and (min-width: 768px) and (max-width: 1200px) {
+    .width-33 {
+        max-width: 48% !important
+    }
+}
+
+</style>
